@@ -1,5 +1,5 @@
 ---
-- set_fact: name="{{ {{topvar.name}} }}"
+- set_fact: name="{{ topvar.name }} "
 - set_fact: gid="{{ topvar.gid }}"
 - set_fact: Gender="{{ topvar.Gender }}"
 
