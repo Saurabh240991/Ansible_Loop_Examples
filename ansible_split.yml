@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  vars:
+    mytext: |
+      hello
+      there how   are
+      you?
+  tasks:
+    - debug:
+        msg: "{{ mytext }}"
+    - debug:
+        msg: "{{ mytext.split() }}"
+    - debug:
+        msg: "{{ mytext.split() | join(' ') }}"
