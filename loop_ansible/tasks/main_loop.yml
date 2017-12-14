@@ -1,0 +1,2 @@
+---
+- debug: msg=" NAME - {{topvar.name}} GID - {{topvar.gid}} GENDER - {{topvar.gender}}"
