@@ -1,2 +1,3 @@
 ---
 - debug: msg=" NAME - {{topvar.name}} GID - {{topvar.gid}} GENDER - {{topvar.Gender}}"
+- include: loop.yml
