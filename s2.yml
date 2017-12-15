@@ -1,0 +1,8 @@
+- hosts: localhost
+
+  vars:
+    split_var: "a,b,c,d:x,e:y,f:z"
+
+
+  tasks:
+  - debug: "{{ split_var | map('match',  *code* ) }}"

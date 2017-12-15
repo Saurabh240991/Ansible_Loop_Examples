@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    my_list: ['hello', 'apple', 'rare', 'trim', "apropos", 'three']
+    my_pattern: 'a[rp].*'
+  tasks:
+    - set_fact:
+        matches: "{%- set tmp = [] -%}
+                  {%- for elem in my_list | map('match', my_pattern) | list -%}
+                    {%- if elem -%}
+                      {{ tmp.append(my_list[loop.index - 1]) }}
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {{ tmp }}"
+
+    - include: x.yml
